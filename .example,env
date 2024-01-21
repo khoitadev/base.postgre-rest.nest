@@ -1,0 +1,30 @@
+ADMIN_ACCOUNT_EMAIL=
+ADMIN_ACCOUNT_PASS=
+SECRET_SESSION=
+JWT_SECRET_TOKEN=
+JWT_SECRET_REFRESH_TOKEN=
+PORT=
+SECRET=
+DOMAIN=
+CLOUD_NAME=
+CLOUD_API_KEY=
+CLOUD_API_SECRET=
+MEDIA_PUBLISH=
+REDIS_HOST=
+REDIS_PORT=
+REDIS_PASSWORD=
+MAIL_USERNAME=
+MAIL_PASSWORD=
+OAUTH_CLIENT_ID=
+OAUTH_CLIENT_SECRET=
+OAUTH_REFRESH_TOKEN=
+REDIREC_URL=
+TIME_REQUIREMENT=
+DATABASE_URL=
+
+# This was inserted by `prisma init`:
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
+
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings

@@ -1,0 +1,61 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateUserInput {
+  avatar: String
+  countryCode: String
+  email: String!
+  ip: String
+  language: String
+  name: String!
+  password: String!
+  phone: String
+  status: String
+  typeLogin: String
+  uid: String
+}
+
+"""Date custom scalar type"""
+scalar Date
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  removeUser(id: Int!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+}
+
+type Query {
+  user(id: Int!): User!
+}
+
+input UpdateUserInput {
+  avatar: String
+  countryCode: String
+  email: String
+  id: Int!
+  ip: String
+  language: String!
+  name: String!
+  password: String
+  phone: String
+  status: String
+  typeLogin: String
+  uid: String
+}
+
+type User {
+  avatar: String
+  countryCode: String
+  email: String!
+  emailVerified: String!
+  id: Int!
+  ip: String
+  language: String!
+  name: String!
+  password: String!
+  phone: String
+  status: String!
+  typeLogin: String
+  uid: String
+}

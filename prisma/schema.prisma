@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id       Int      @id @default(autoincrement())
+  name     String
+  email    String   @unique
+  password String
+  role     String[]
+  status   String?  @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Email {
+  id       Int      @id @default(autoincrement())
+  name     String
+  keyword  String   @unique
+  content  Json
+  status   String?  @default("active")
+  sort     Int      @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Language {
+  id       Int      @id @default(autoincrement())
+  locale   String   @unique
+  name     String
+  status   String  @default("active")
+  image    String?
+  sort     Int      @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Otp {
+  id        Int      @id @default(autoincrement())
+  type      String
+  email     String
+  code      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  name          String
+  email         String   @unique
+  password      String
+  emailVerified Boolean  @default(false)
+  avatar        String   @default("")
+  phone         String   @default("")
+  language      String   @default("vi")
+  status        String   @default("active")
+  typeLogin     String   @default("default")
+  uid           String   @default("")
+  countryCode   String   @default("VN")
+  ip            String   @default("127.0.0.1")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
